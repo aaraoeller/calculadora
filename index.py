@@ -3,10 +3,11 @@ import math
 print('''Suas opções:
 [ 1 ] Área de um Quadrado
 [ 2 ] Perímetro de um Quadrado
-[ 3 ] Área de um Círculo
+[ 3 ] Área de um Círculo usando o Raio
 [ 4 ] Perímetro de um Círculo
 [ 5 ] Raio de um Círculo
-[ 6 ] Metade da Área de um Círculo
+[ 6 ] Área de um Círculo usando o Diâmetro
+[ 7 ] Metade da Área de um Círculo
 ''')
 
 tipo_calculo = int(input('Selecione qual o tipo de cálculo você deseja: '))
@@ -54,11 +55,20 @@ elif tipo_calculo == 5:
 
 elif tipo_calculo == 6:
 
-    n6 = float(input("Digite o diâmetro do Círculo: "))
+    n6 = float(input("Digite o valor do Diâmetro do Círculo: "))
 
-    diametro_circulo = (n6 / 2)
-    calc_diam = (diametro_circulo * diametro_circulo * 3.14 )
-    metade_area = (calc_diam / 2)
+    diam_circulo = (n6 / 2)
+    calc_diam = (diam_circulo * diam_circulo * 3.14 )
+
+    print(f"A Área do Círculo é: {calc_diam:.1f}")
+
+elif tipo_calculo == 7:
+
+    n7 = float(input("Digite o diâmetro do Círculo: "))
+
+    diametro_circulo = (n7 / 2)
+    calc_diametro = (diametro_circulo * diametro_circulo * 3.14 )
+    metade_area = (calc_diametro / 2)
 
     print(f"A metade da área do Círculo é: {metade_area:.1f}")
 
