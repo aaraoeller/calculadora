@@ -6,6 +6,7 @@ print('''Suas opções:
 [ 3 ] Área de um Círculo
 [ 4 ] Perímetro de um Círculo
 [ 5 ] Raio de um Círculo
+[ 6 ] Metade da Área de um Círculo
 ''')
 
 tipo_calculo = int(input('Selecione qual o tipo de cálculo você deseja: '))
@@ -43,12 +44,23 @@ elif tipo_calculo == 4:
     print(f"O perímetro do Círculo é: {perimetro_circulo:.1f}")
 
 elif tipo_calculo == 5:
+    
     n5 = float(input("Digite o valor da área do Círculo: "))
 
     raio_circulo = (n5 / 3.14)
     raiz_quadrada = math.sqrt(raio_circulo)
 
     print(f"O raio do Círculo é: {raiz_quadrada:.1f}")
+
+elif tipo_calculo == 6:
+
+    n6 = float(input("Digite o diâmetro do Círculo: "))
+
+    diametro_circulo = (n6 / 2)
+    calc_diam = (diametro_circulo * diametro_circulo * 3.14 )
+    metade_area = (calc_diam / 2)
+
+    print(f"A metade da área do Círculo é: {metade_area:.1f}")
 
 else:
     print("Ação inválida")
