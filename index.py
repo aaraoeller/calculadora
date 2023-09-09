@@ -8,6 +8,7 @@ print('''Suas opções:
 [ 5 ] Raio de um Círculo
 [ 6 ] Área de um Círculo usando o Diâmetro
 [ 7 ] Metade da Área de um Círculo
+[ 8 ] Área de um Triângulo
 ''')
 
 tipo_calculo = int(input('Selecione qual o tipo de cálculo você deseja: '))
@@ -71,6 +72,15 @@ elif tipo_calculo == 7:
     metade_area = (calc_diametro / 2)
 
     print(f"A metade da área do Círculo é: {metade_area:.1f}")
+
+elif tipo_calculo == 8:
+
+    n8 = float(input("Digite o valor da altura do Triângulo: "))
+    n8_1 = float(input("Digite o valor da base do Triângulo: "))
+
+    calc1 = (n8 * n8_1) / 2
+
+    print(f"A Área é: {calc1:.1f}")
 
 else:
     print("Ação inválida")
